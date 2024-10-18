@@ -6,6 +6,9 @@ import { useRouter } from "next/navigation";
 import { useFacebookSDK } from "../hooks/useFacebook";
 
 function LoginBm() {
+  const { loginWithFacebook } = useFacebookSDK();
+
+
   const router = useRouter();
   const handleLogin = () => {
     router.push("/");
@@ -13,6 +16,7 @@ function LoginBm() {
 
   return (
     <div className="flex justify-center items-center flex-col">
+       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src="/image/login.png" alt="#" width={400} height={400} />
       <div className="flex justify-center">
         <Button onClick={handleLogin} size="large" icon={<RollbackOutlined />}>
@@ -22,9 +26,7 @@ function LoginBm() {
         <Button
           size="large"
           icon={<FacebookOutlined />}
-          onClick={async () => {
-            await useFacebookSDK;
-          }}
+          onClick={loginWithFacebook}
           type="primary"
         >
           Login BM
