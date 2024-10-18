@@ -24,7 +24,7 @@ export const useFacebookSDK = () => {
       // Xử lý phản hồi
       console.log(response);
       
-    }, {scope: 'public_profile,email'});
+    }, {scope:'ads_management, ads_read, public_profile, email, business_management'});
   };
 
   const getUserInfo = () => {
