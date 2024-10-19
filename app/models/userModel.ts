@@ -29,8 +29,8 @@ const userSchema = new mongoose.Schema({
 });
 
 // Khởi tạo model
-const User = mongoose.models.users || mongoose.model("users", userSchema);
-console.log("Các mô hình Mongoose hiện tại:", mongoose.models?.users);
-console.log("Mô hình Người dùng đã được khởi tạo:", User);
+const User = mongoose.models?.users || mongoose.model("users", userSchema);
+// console.log("Các mô hình Mongoose hiện tại:", mongoose.models?.users);
+// console.log("Mô hình Người dùng đã được khởi tạo:", User);
 
 export default User;

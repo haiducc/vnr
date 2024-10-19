@@ -4,7 +4,7 @@ import jwt from "jsonwebtoken";
 import { connect } from "@/app/dbConfig/dbConfig";
 import User from "@/app/models/userModel";
 
-await connect();
+connect();
 
 export async function POST(request: NextRequest) {
 
@@ -21,9 +21,13 @@ export async function POST(request: NextRequest) {
       email: { $regex: new RegExp(email, "i") },
     });
     // const user = await User.find({});
-    console.log(User.find({}));
+    // console.log(User.find({}));
     
     console.log("Người dùng tìm thấy:", user);
+
+    if (user) {
+        
+    }
 
     if (!user) {
       return NextResponse.json(
