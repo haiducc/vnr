@@ -36,10 +36,3 @@
 // };
 
 // export default Movies;
-import React from 'react';
-
-const MoviesPage: React.FC = () => {
-  return <div>Danh sách phim</div>;
-};
-
-export default MoviesPage;

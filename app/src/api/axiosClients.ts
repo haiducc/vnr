@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseUrl = "";
+const baseUrl = process.env.TOKEN_SECRET;
 const axiosInstance = axios.create({
     baseURL: baseUrl,
     headers: {
