@@ -17,10 +17,14 @@ const userSchema = new mongoose.Schema({
         required: true, // Trường này là bắt buộc
         minlength: 6 // Mật khẩu tối thiểu 6 ký tự
     },
-    createdAt: {
+    updateDate: {
         type: Date,
         default: Date.now // Tự động lấy thời gian hiện tại
-    }
+    },
+    isActive: {
+        default: true
+    },
+    
 });
 
 // Tạo mô hình người dùng từ schema
