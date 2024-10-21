@@ -8,19 +8,19 @@ import mongoose from "mongoose";
 const userSchema = new mongoose.Schema({
   name: {
     type: String,
-    // required: [true, "Vui lòng cung cấp tên người dùng"],
+    required: [true, "Vui lòng cung cấp tên người dùng"],
     unique: true,
     trim: true, 
   },
   email: {
     type: String,
-    // required: [true, "Vui lòng cung cấp email"],
+    required: [true, "Vui lòng cung cấp email"],
     unique: true,
     trim: true, 
   },
   password: {
     type: String,
-    // required: [true, "Vui lòng cung cấp mật khẩu"],
+    required: [true, "Vui lòng cung cấp mật khẩu"],
   },
   forgotPasswordToken: String,
   forgotPasswordTokenExpiry: Date,
